@@ -1,0 +1,215 @@
+.home-page {
+    animation: fadeIn 0.5s ease;
+}
+
+.hero {
+    position: relative;
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-top: -80px;
+    /* pull up behind navbar */
+    padding-top: 80px;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        linear-gradient(135deg, rgba(79, 70, 229, 0.1) 0%, rgba(16, 185, 129, 0.1) 100%),
+        url('https://images.unsplash.com/photo-1542314831-c53cd4b85aca?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover no-repeat;
+    z-index: -1;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, transparent 0%, rgba(15, 23, 42, 0.6) 100%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    color: var(--white);
+    padding: 4rem 1rem;
+}
+
+.hero-title {
+    font-size: clamp(3rem, 6vw, 5rem);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    letter-spacing: -1px;
+}
+
+.hero-subtitle {
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 600px;
+    margin: 0 auto 3rem auto;
+}
+
+/* Glass Search Bar */
+.search-bar.glass-card {
+    max-width: 900px;
+    margin: 0 auto;
+    border-radius: var(--radius-xl);
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.search-inputs {
+    display: flex;
+    align-items: center;
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    padding: 0.5rem;
+}
+
+.search-field {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem 1.5rem;
+    flex: 1;
+}
+
+.search-icon {
+    color: var(--primary);
+    flex-shrink: 0;
+}
+
+.field-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.field-group label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--dark);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.field-group input {
+    border: none;
+    outline: none;
+    font-family: inherit;
+    font-size: 0.95rem;
+    color: var(--dark-soft);
+    width: 100%;
+}
+
+.search-divider {
+    width: 1px;
+    height: 40px;
+    background-color: var(--gray-light);
+}
+
+.search-btn {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border-radius: calc(var(--radius-lg) - 4px);
+    margin-left: 0.5rem;
+}
+
+/* Featured Section */
+.featured-section {
+    padding: 5rem 1.5rem;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--gray);
+}
+
+.featured-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.hotel-card {
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-image-placeholder {
+    height: 200px;
+    background: linear-gradient(135deg, var(--primary-light), #E2E8F0);
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+}
+
+.card-header h3 {
+    font-size: 1.25rem;
+}
+
+.rating {
+    background: var(--dark);
+    color: var(--warning);
+    padding: 0.25rem 0.5rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.location {
+    color: var(--gray);
+    font-size: 0.9rem;
+}
+
+.price-tag .price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .search-inputs {
+        flex-direction: column;
+        background: transparent;
+    }
+
+    .search-field {
+        background: var(--white);
+        width: 100%;
+        border-radius: var(--radius-lg);
+        margin-bottom: 0.5rem;
+    }
+
+    .search-divider {
+        display: none;
+    }
+
+    .search-btn {
+        width: 100%;
+        margin: 0;
+    }
+}

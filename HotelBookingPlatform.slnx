@@ -1,0 +1,10 @@
+<Solution>
+  <Project Path="hotelbookingplatform.client/hotelbookingplatform.client.esproj">
+    <Build />
+    <Deploy />
+  </Project>
+  <Project Path="HotelBookingPlatform.Core/HotelBookingPlatform.Core.csproj" Id="f95ba547-a651-40a3-8742-aa06ca9387aa" />
+  <Project Path="HotelBookingPlatform.Infrastructure/HotelBookingPlatform.Infrastructure.csproj" Id="e098dd69-98a5-4ed5-a263-c6006964cecc" />
+  <Project Path="HotelBookingPlatform.Server/HotelBookingPlatform.Server.csproj" />
+  <Project Path="HotelBookingPlatform.Services/HotelBookingPlatform.Services.csproj" Id="d89b1fdf-d103-4a4e-a48d-231bef5021b6" />
+</Solution>

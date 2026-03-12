@@ -1,0 +1,222 @@
+.about-page {
+    animation: fadeIn 0.5s ease;
+    padding-bottom: 5rem;
+}
+
+.about-hero {
+    position: relative;
+    min-height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-top: -80px;
+    padding-top: 80px;
+}
+
+.about-hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        linear-gradient(135deg, rgba(79, 70, 229, 0.4) 0%, rgba(16, 185, 129, 0.4) 100%),
+        url('https://images.unsplash.com/photo-1551882547-ff40c0d5bf8f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover no-repeat;
+    z-index: -1;
+}
+
+.about-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent, var(--gray-light));
+}
+
+@media (prefers-color-scheme: dark) {
+    .about-hero-overlay {
+        background: linear-gradient(to bottom, transparent, var(--dark));
+    }
+}
+
+.about-hero-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    color: var(--dark);
+}
+
+.about-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    color: var(--white);
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.about-subtitle {
+    font-size: 1.25rem;
+    color: var(--white);
+    font-weight: 500;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Info Cards & Content */
+.about-content {
+    margin-top: -3rem;
+    position: relative;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.info-card {
+    padding: 3rem;
+    text-align: center;
+}
+
+.info-card h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.info-card p {
+    color: var(--gray);
+    line-height: 1.8;
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.card-icon-wrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: var(--primary-light);
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+}
+
+@media (prefers-color-scheme: dark) {
+    .card-icon-wrapper {
+        background: rgba(79, 70, 229, 0.2);
+    }
+}
+
+.contact-wrapper {
+    background: transparent;
+    gap: 1rem;
+    width: auto;
+}
+
+/* Tech Stack Grid */
+.tech-stack-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    text-align: left;
+    margin-top: 2rem;
+}
+
+.tech-item h3 {
+    color: var(--primary);
+    border-bottom: 2px solid var(--primary-light);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.tech-item ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.tech-item ul li {
+    position: relative;
+    padding-left: 1.5rem;
+    color: var(--dark-soft);
+}
+
+.tech-item ul li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--secondary);
+    font-weight: bold;
+}
+
+/* Contact Grid */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.contact-grid .info-card {
+    padding: 2.5rem 2rem;
+}
+
+.developer-name {
+    font-size: 1.25rem !important;
+    color: var(--dark) !important;
+    margin-bottom: 0.5rem !important;
+}
+
+.contact-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+.contact-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--dark-soft);
+    font-size: 1.1rem;
+}
+
+/* Animations */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.delay-1 {
+    animation-delay: 0.2s;
+}
+
+.delay-2 {
+    animation-delay: 0.4s;
+}
+
+.delay-3 {
+    animation-delay: 0.6s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+    .tech-stack-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .info-card {
+        padding: 2rem 1.5rem;
+    }
+}
